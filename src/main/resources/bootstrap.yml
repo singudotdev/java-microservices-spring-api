@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: java-keycloak-spring-api
+  cloud:
+    consul:
+      host: consul-server
+      port: 8500
+      discovery:
+        instanceId: ${spring.application.name}-${server.port}-${random.int[1,99]}
+        health-check-path: /actuator/health   # Health check endpoint path
+        health-check-interval: 10s

@@ -1,0 +1,17 @@
+server:
+  port: 9001
+
+api:
+  adminPassword: admin
+
+spring:
+
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+      database: api
+      username: root
+      password: changeme
+      authentication-database: admin
+      authentication-mechanism: SCRAM-SHA-1
