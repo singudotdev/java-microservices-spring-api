@@ -36,8 +36,6 @@ services:
       - CONSUL_CLIENT_INTERFACE=eth0
       - CONSUL_SERVER=true
     command: "agent -server -bootstrap-expect=1 -ui -client=0.0.0.0"
-    volumes:
-      - consul-data:/consul/data
     networks:
       - java-spring-keycloak-api
 
@@ -56,13 +54,23 @@ services:
       - java-spring-keycloak-api
 
 
-  app:
-    container_name: java-spring-keycloak-api-app
-    build: .
+  api:
+    container_name: java-spring-keycloak-api
+    image: java-spring-keycloak-api:latest
     ports:
       - "9001:9001"
     depends_on:
       - mongodb
+    networks:
+      - java-spring-keycloak-api
+
+  gateway:
+    container_name: java-spring-keycloak-gateway
+    image: java-spring-keycloak-gateway:latest
+    ports:
+      - "9100:9100"
+    depends_on:
+      - api
     networks:
       - java-spring-keycloak-api
 
@@ -71,7 +79,3 @@ networks:
     # noinspection ComposeUnknownKeys
     name: java-spring-keycloak-api
     driver: bridge
-
-volumes:
-  consul-data:
-    name: java-spring-keycloak-api-consul-data

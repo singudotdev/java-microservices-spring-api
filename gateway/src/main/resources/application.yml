@@ -1,11 +1,10 @@
 server:
-  port: 9001
+  port: 9100
 
 api:
   adminPassword: admin
 
 spring:
-
   data:
     mongodb:
       host: mongodb

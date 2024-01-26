@@ -2,8 +2,9 @@
 ## The ultimate template for starting a Java API with Spring
 
 
-This is an API that uses Spring Boot 3, Spring Security 6, Swagger/OpenAPI 3, Logstash and Consul.
-Will add elasticsearch in the future in roder to use PostgreSQL, Elasticsearch and MongoDB.
+This is an API with the purpose of be a template for microservice based projects that uses Spring Boot 3, 
+Swagger/OpenAPI 3, Logstash and Consul as a service discovery.
+Will add elasticsearch in the future in orroder to use PostgreSQL, Elasticsearch and MongoDB.
 
 How to deploy with Docker Compose:
 ```sh

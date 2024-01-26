@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    consul:
+      config:
+        enabled: false
+      host: consul-server
+      port: 8500
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: microservice-api
+          uri: lb://microservice-api
+          predicates:
+            - Path="/api/v1**"
+  server:
+    port: 9100
