@@ -4,16 +4,16 @@
 
 This is an API with the purpose of be a template for microservice based projects that uses Spring Boot 3, 
 Swagger/OpenAPI 3, Logstash and Consul as a service discovery.
-Will add elasticsearch in the future in orroder to use PostgreSQL, Elasticsearch and MongoDB.
+Will add elasticsearch and PostgreSQL in the future in order to use PostgreSQL, Elasticsearch and MongoDB.
 
 How to deploy with Docker Compose:
 ```sh
-docker compose up -d
+sudo ./run.sh
 ```
 
 To stop the deploy:
 ```sh
-docker compose down
+sudo ./stop.sh
 ```
 
 
