@@ -1,6 +1,9 @@
 spring:
   application:
     name: gateway
+  server:
+    port: 9100
+
   cloud:
     consul:
       config:
@@ -16,5 +19,3 @@ spring:
           uri: lb://microservice-api
           predicates:
             - Path="/api/v1**"
-  server:
-    port: 9100
