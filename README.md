@@ -7,6 +7,12 @@ Swagger/OpenAPI 3, Logstash and Consul as a service discovery.
 Will add elasticsearch and PostgreSQL in the future in order to use PostgreSQL, Elasticsearch and MongoDB.
 
 How to deploy with Docker Compose:
+Chmod in order to add execution permissions:
+```sh
+chmod +x ./run.sh
+```
+
+Execute with root:
 ```sh
 sudo ./run.sh
 ```

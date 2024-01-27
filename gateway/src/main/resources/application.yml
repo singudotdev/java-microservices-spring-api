@@ -5,6 +5,11 @@ api:
   adminPassword: admin
 
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://172.17.0.3:8080/realms/spring-api
   data:
     mongodb:
       host: mongodb
