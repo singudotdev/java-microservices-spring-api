@@ -24,6 +24,6 @@ sudo ./stop.sh
 
 
 This API is intended to be used with the ELK Stack in order to centralize logs,
-so you will need to deploy it also. If not, you must update the code: delete "logback.xml" and logstash dependency.
+so you will need to deploy it also. If not, you must update the code: delete `logback.xml` from resources and logstash dependency from `pom.xml`.
 
 Docker ELK: https://github.com/deviantony/docker-elk
