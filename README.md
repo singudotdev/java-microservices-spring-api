@@ -3,7 +3,7 @@
 
 
 This is an API with the purpose of be a template for microservice based projects that uses Spring Boot 3, 
-Swagger/OpenAPI 3, Logstash and Consul as a service discovery.
+Swagger/OpenAPI 3, Logstash, Consul as a service discovery and Keycloak as authentication platform.
 Will add elasticsearch and PostgreSQL in the future in order to use PostgreSQL, Elasticsearch and MongoDB.
 
 How to deploy with Docker Compose:
