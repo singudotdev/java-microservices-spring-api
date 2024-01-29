@@ -10,12 +10,3 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://172.17.0.3:8080/realms/spring-api
-  data:
-    mongodb:
-      host: mongodb
-      port: 27017
-      database: api
-      username: root
-      password: changeme
-      authentication-database: admin
-      authentication-mechanism: SCRAM-SHA-1
