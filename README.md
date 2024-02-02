@@ -23,10 +23,10 @@ sudo ./stop.sh
 ```
 
 
+You can deploy your own Keycloak instance with Docker using this guide: https://www.keycloak.org/getting-started/getting-started-docker
+
+
 This API is intended to be used with the ELK Stack in order to centralize logs,
 so you will need to deploy it also. If not, you must update the code: delete `logback.xml` from resources and logstash dependency from `pom.xml`.
 
 Docker ELK: https://github.com/deviantony/docker-elk
-
-
-You can deploy your own Keycloak instance with Docker using this guide: https://www.keycloak.org/getting-started/getting-started-docker
