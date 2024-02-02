@@ -17,7 +17,7 @@ Execute with root:
 sudo ./run.sh
 ```
 
-To stop the deploy:
+To stop the deployment:
 ```sh
 sudo ./stop.sh
 ```
