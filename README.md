@@ -29,4 +29,4 @@ so you will need to deploy it also. If not, you must update the code: delete `lo
 Docker ELK: https://github.com/deviantony/docker-elk
 
 
-And you can deploy your own Keycloak instance with Docker using this guide: https://www.keycloak.org/getting-started/getting-started-docker
+You can deploy your own Keycloak instance with Docker using this guide: https://www.keycloak.org/getting-started/getting-started-docker
