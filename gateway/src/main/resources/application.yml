@@ -1,9 +1,15 @@
 server:
   port: 9100
+  ssl:
+    enabled: true
+    key-store-type: PKCS12
+    key-store: classpath:ssl.p12
+    key-store-password: test1234
+    key-alias: ssl
 
 spring:
   security:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://<keycloak-ip>:8080/realms/spring-api
+          issuer-uri: http://172.17.0.4:8080/realms/spring-api
