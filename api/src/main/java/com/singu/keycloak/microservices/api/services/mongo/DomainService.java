@@ -1,8 +1,8 @@
 package com.singu.keycloak.microservices.api.services.mongo;
 
-import com.singu.keycloak.microservices.api.domains.responses.DomainResponse;
 import com.singu.keycloak.microservices.api.domains.mongo.Domain;
 import com.singu.keycloak.microservices.api.domains.requests.DomainRequest;
+import com.singu.keycloak.microservices.api.domains.responses.DomainResponse;
 import com.singu.keycloak.microservices.api.mappers.DomainMapper;
 import com.singu.keycloak.microservices.api.repositories.mongo.DomainRepository;
 import lombok.RequiredArgsConstructor;
