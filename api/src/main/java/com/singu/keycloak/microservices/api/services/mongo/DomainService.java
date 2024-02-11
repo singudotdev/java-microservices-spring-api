@@ -11,14 +11,15 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Service
 @RequiredArgsConstructor
 public class DomainService {
 
     private final DomainRepository repository;
 
-    public Domain getByName(String name) {
-        return repository.findByName(name);
+    public DomainResponse getByName(String name) {
+        return DomainMapper.generateResponse(repository.findByName(name));
     }
 
     public List<DomainResponse> getAll() {
@@ -31,8 +32,6 @@ public class DomainService {
     }
 
     public DomainResponse create(DomainRequest request) {
-        final Domain createdDomain = repository.save(DomainMapper.createDomain(request));
-
-        return DomainMapper.generateResponse(createdDomain);
+        return DomainMapper.generateResponse(repository.save(DomainMapper.createDomain(request)));
     }
 }

@@ -4,6 +4,7 @@ import com.singu.keycloak.microservices.api.domains.mongo.Domain;
 import com.singu.keycloak.microservices.api.domains.requests.DomainRequest;
 import com.singu.keycloak.microservices.api.domains.responses.DomainResponse;
 
+
 public class DomainMapper {
 
     private DomainMapper() {
@@ -11,6 +12,7 @@ public class DomainMapper {
     }
 
     public static DomainResponse generateResponse(Domain domain) {
+
         return DomainResponse.builder()
                 .id(domain.getId())
                 .name(domain.getName())
