@@ -9,12 +9,12 @@ Will add elasticsearch and PostgreSQL in the future in order to use PostgreSQL, 
 How to deploy with Docker Compose:
 Chmod in order to add execution permissions:
 ```sh
-chmod +x ./run.sh && chmod +x ./stop.sh
+chmod +x ./deploy.sh && chmod +x ./stop.sh
 ```
 
 Execute with root:
 ```sh
-sudo ./run.sh
+sudo ./deploy.sh
 ```
 
 To stop the deployment:
