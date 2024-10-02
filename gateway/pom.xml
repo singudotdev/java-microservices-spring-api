@@ -9,8 +9,8 @@
         <version>3.2.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.singu</groupId>
-    <artifactId>keycloak.microservices.gateway</artifactId>
+    <groupId>dev.singu</groupId>
+    <artifactId>microservices.gateway</artifactId>
     <version>1.0</version>
     <name>Java Spring Gateway</name>
     <description>Gateway Template</description>

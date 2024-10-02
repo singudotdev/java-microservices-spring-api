@@ -1,8 +1,5 @@
-version: '3'
 services:
-
   mongodb:
-    container_name: java-spring-keycloak-api-mongodb
     image: mongo:4.4.26
     restart: always
     environment:
@@ -10,10 +7,9 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: 'changeme'
       MONGO_INITDB_DATABASE: 'api'
     networks:
-      - java-spring-keycloak-api
+      - java-microservices-spring-api
 
   mongo-express:
-    container_name: java-spring-keycloak-api-mongo-express
     image: mongo-express:latest
     restart: always
     ports:
@@ -23,11 +19,10 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: 'changeme'
       ME_CONFIG_MONGODB_SERVER: 'mongodb'
     networks:
-      - java-spring-keycloak-api
+      - java-microservices-spring-api
 
   consul-server:
     image: consul:1.15.4
-    container_name: java-spring-keycloak-api-consul-server
     ports:
       - "8500:8500"
       - "8600:8600/udp"
@@ -37,11 +32,10 @@ services:
       - CONSUL_SERVER=true
     command: "agent -server -bootstrap-expect=1 -ui -client=0.0.0.0"
     networks:
-      - java-spring-keycloak-api
+      - java-microservices-spring-api
 
   consul-client:
     image: consul:1.15.4
-    container_name: java-spring-keycloak-api-consul-client
     ports:
       - "8501:8500"
       - "8601:8600/udp"
@@ -51,31 +45,29 @@ services:
       - CONSUL_SERVER=false
     command: "agent -ui -client=0.0.0.0 -retry-join=consul-server"
     networks:
-      - java-spring-keycloak-api
+      - java-microservices-spring-api
 
 
   api:
-    container_name: java-spring-keycloak-api
-    image: java-spring-keycloak-api:latest
+    image: java-microservices-spring-api:latest
     ports:
       - "9001:9001"
     depends_on:
       - mongodb
     networks:
-      - java-spring-keycloak-api
+      - java-microservices-spring-api
 
   gateway:
-    container_name: java-spring-keycloak-gateway
-    image: java-spring-keycloak-gateway:latest
+    image: java-microservices-spring-gateway:latest
     ports:
       - "9100:9100"
     depends_on:
       - api
     networks:
-      - java-spring-keycloak-api
+      - java-microservices-spring-api
 
 networks:
-  java-spring-keycloak-api:
+  java-microservices-spring-api:
     # noinspection ComposeUnknownKeys
-    name: java-spring-keycloak-api
+    name: java-microservices-spring-api
     driver: bridge
